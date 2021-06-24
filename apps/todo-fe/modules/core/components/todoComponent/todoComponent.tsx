@@ -4,7 +4,7 @@ import './todoComponent.module.css';
 export interface TodoItemInterface {
   id: string;
   name: string;
-  isDone: boolean;
+  isComplete: boolean;
 }
 export interface TodoPros {
   item: TodoItemInterface;
@@ -15,7 +15,7 @@ const Todo: React.FC<TodoPros> = ({ item, removeItem, completeItem }) => {
   return (
     <li
       className={`todoComponent__container list-group-item ${
-        item.isDone ? 'done' : ''
+        item.isComplete ? 'done' : ''
       }`}
     >
       <span className="todoComponent__itemName">{item.name}</span>
@@ -28,10 +28,12 @@ const Todo: React.FC<TodoPros> = ({ item, removeItem, completeItem }) => {
       </button>
       <button
         className="done-btn btn btn-outline-success btn-sm"
-        aria-label={`${item.isDone ? 'Uncomplete' : 'Complete'} ${item.name}`}
+        aria-label={`${item.isComplete ? 'Uncomplete' : 'Complete'} ${
+          item.name
+        }`}
         onClick={() => completeItem(item)}
       >
-        {item.isDone ? 'Uncomplete' : 'Complete'}
+        {item.isComplete ? 'Uncomplete' : 'Complete'}
       </button>
     </li>
   );

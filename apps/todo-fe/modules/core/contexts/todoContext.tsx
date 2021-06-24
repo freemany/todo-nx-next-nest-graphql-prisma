@@ -3,8 +3,8 @@ import { TodoItemInterface } from './../components/todoComponent/todoComponent';
 import todoReducer from '../reducers/todoReducer';
 
 const todos = [
-  { id: '1', name: 'first', isDone: false },
-  { id: '2', name: 'second', isDone: false },
+  { id: '1', name: 'first', isComplete: false },
+  { id: '2', name: 'second', isComplete: false },
 ];
 
 export interface ReducerInterface {

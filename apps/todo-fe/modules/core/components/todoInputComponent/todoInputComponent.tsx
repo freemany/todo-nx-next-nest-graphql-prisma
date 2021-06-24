@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import { TodoInterface } from '../todoListComponent/todoListComponent';
-import { v4 as uuidv4 } from 'uuid';
+import { createTodo } from '../../services/todoService';
 
 export interface TodoInputPros {
   addItem: (item: TodoInterface) => void;
 }
 const TodoInput: React.FC<TodoInputPros> = ({ addItem }) => {
   const [value, setValue] = useState('');
-  const createItem = () => {
-    addItem({ id: uuidv4(), name: value, isDone: false });
-    setValue('');
+  const createItem = async () => {
+    try {
+      const newTodo = await createTodo(value);
+      addItem(newTodo);
+      setValue('');
+    } catch (error) {
+      console.error(error);
+    }
   };
   return (
     <>
