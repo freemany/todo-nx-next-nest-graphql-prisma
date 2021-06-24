@@ -1,8 +1,8 @@
 import React, { useState, useCallback, useReducer, useContext } from "react";
 import { ACTIONS } from "../../constants/contants";
-import { TodoContext } from "./../../contexts/todoContext";
-import Todo from "./../todoComponent/todoComponent";
-import TodoInput from "./../todoInputComponent/todoInputComponent";
+import { TodoContext } from "../../contexts/todoContext";
+import Todo from "../todoComponent/todoComponent";
+import TodoInput from "../todoInputComponent/todoInputComponent";
 
 export interface TodoInterface {
   name: string;

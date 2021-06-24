@@ -1,8 +1,8 @@
 import React from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import { TodoProvider } from '../contexts/todoContext';
-import TodoList from '../components/todoListComponent/todoListComponent';
+import { TodoProvider } from '../modules/core/contexts/todoContext';
+import TodoList from '../modules/core/components/todoListComponent/todoListComponent';
 import './styles.css';
 
 function CustomApp({ Component, pageProps }: AppProps) {
