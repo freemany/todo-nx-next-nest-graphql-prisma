@@ -1,4 +1,4 @@
-# TodoApp
+# Todo App on Next+Nest+GraphQL+Prisma
 
 This project was generated using [Nx](https://nx.dev).
 
