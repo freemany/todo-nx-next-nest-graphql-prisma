@@ -10,6 +10,7 @@ This project was generated using [Nx](https://nx.dev).
 
 Front end:
 `$ yarn start todo-fe`
+
 Back end:
 `$ yarn start todo-api`
 
@@ -53,4 +54,4 @@ Back end:
    After you update the model, you need regenerate the client:
    `$ npx prisma generate`
 
-### Have fund so far !!!###
+### Have fund so far !!!
