@@ -8,5 +8,5 @@ export class UpdateTodoInput extends PartialType(CreateTodoInput) {
   @Field({ nullable: true })
   name?: string;
   @Field({ nullable: true })
-  isComplete?: false;
+  isComplete?: boolean;
 }

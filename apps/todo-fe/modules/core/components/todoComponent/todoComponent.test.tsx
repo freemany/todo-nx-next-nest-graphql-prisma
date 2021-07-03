@@ -1,7 +1,7 @@
 import React from "react";
 import { render, screen, fireEvent, cleanup } from "@testing-library/react";
 import Todo from "./todoComponent";
-import sino from "sinon";
+import sino from "sino";
 
 const noop = () => undefined;
 
